@@ -1,0 +1,167 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 6.440589569160998 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "" 
+        xmin = 0 
+        xmax = 6.440589569160998 
+        intervals: size = 15 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.47522063212572024 
+            text = "" 
+        intervals [2]:
+            xmin = 0.47522063212572024 
+            xmax = 0.9637751911130812 
+            text = "saca" 
+        intervals [3]:
+            xmin = 0.9637751911130812 
+            xmax = 1.3108597153247836 
+            text = "" 
+        intervals [4]:
+            xmin = 1.3108597153247836 
+            xmax = 1.8079214432497352 
+            text = "sEca" 
+        intervals [5]:
+            xmin = 1.8079214432497352 
+            xmax = 2.203473584144911 
+            text = "" 
+        intervals [6]:
+            xmin = 2.203473584144911 
+            xmax = 2.6946732752222067 
+            text = "seca" 
+        intervals [7]:
+            xmin = 2.6946732752222067 
+            xmax = 3.011869145609523 
+            text = "" 
+        intervals [8]:
+            xmin = 3.011869145609523 
+            xmax = 3.521848799348795 
+            text = "sica" 
+        intervals [9]:
+            xmin = 3.521848799348795 
+            xmax = 3.7343675111009933 
+            text = "" 
+        intervals [10]:
+            xmin = 3.7343675111009933 
+            xmax = 4.221848799348793 
+            text = "sOca" 
+        intervals [11]:
+            xmin = 4.221848799348793 
+            xmax = 4.421848799348792 
+            text = "" 
+        intervals [12]:
+            xmin = 4.421848799348792 
+            xmax = 4.912619289210936 
+            text = "soca" 
+        intervals [13]:
+            xmin = 4.912619289210936 
+            xmax = 5.265059145196846 
+            text = "" 
+        intervals [14]:
+            xmin = 5.265059145196846 
+            xmax = 5.738901720378969 
+            text = "suca" 
+        intervals [15]:
+            xmin = 5.738901720378969 
+            xmax = 6.440589569160998 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "vogaisPB" 
+        xmin = 0 
+        xmax = 6.440589569160998 
+        intervals: size = 15 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.6994278123491599 
+            text = "" 
+        intervals [2]:
+            xmin = 0.6994278123491599 
+            xmax = 0.7819913695894203 
+            text = "a" 
+        intervals [3]:
+            xmin = 0.7819913695894203 
+            xmax = 1.5530284605912075 
+            text = "" 
+        intervals [4]:
+            xmin = 1.5530284605912075 
+            xmax = 1.616948633938506 
+            text = "\ef" 
+        intervals [5]:
+            xmin = 1.616948633938506 
+            xmax = 2.434660539824474 
+            text = "" 
+        intervals [6]:
+            xmin = 2.434660539824474 
+            xmax = 2.549923485734163 
+            text = "e" 
+        intervals [7]:
+            xmin = 2.549923485734163 
+            xmax = 3.2719714344209674 
+            text = "" 
+        intervals [8]:
+            xmin = 3.2719714344209674 
+            xmax = 3.335273000435429 
+            text = "i" 
+        intervals [9]:
+            xmin = 3.335273000435429 
+            xmax = 3.9702217005324325 
+            text = "" 
+        intervals [10]:
+            xmin = 3.9702217005324325 
+            xmax = 4.0517081587339225 
+            text = "\ct" 
+        intervals [11]:
+            xmin = 4.0517081587339225 
+            xmax = 4.639793874989538 
+            text = "" 
+        intervals [12]:
+            xmin = 4.639793874989538 
+            xmax = 4.714367410561386 
+            text = "o" 
+        intervals [13]:
+            xmin = 4.714367410561386 
+            xmax = 5.485702968642915 
+            text = "" 
+        intervals [14]:
+            xmin = 5.485702968642915 
+            xmax = 5.562939844616427 
+            text = "u" 
+        intervals [15]:
+            xmin = 5.562939844616427 
+            xmax = 6.440589569160998 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "midpoint" 
+        xmin = 0 
+        xmax = 6.440589569160998 
+        points: size = 7 
+        points [1]:
+            number = 0.7411934433738318 
+            mark = "a" 
+        points [2]:
+            number = 1.5849885472648566 
+            mark = "\ef" 
+        points [3]:
+            number = 2.4833831368143504 
+            mark = "e" 
+        points [4]:
+            number = 3.3091837756415856 
+            mark = "i" 
+        points [5]:
+            number = 4.024971342072923 
+            mark = "\ct" 
+        points [6]:
+            number = 4.671815387675401 
+            mark = "o" 
+        points [7]:
+            number = 5.544466057726811 
+            mark = "u" 
