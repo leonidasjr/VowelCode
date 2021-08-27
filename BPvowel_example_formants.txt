@@ -1,0 +1,1 @@
+IPA 	 f1 	 f2 	 f3 	 f4 	  f1zsc 	 f2zsc 	 f3zsc  	 f4zsc 	 f1sd 	 f2sd 	 f3sd 	 f4sd 	 df1 	 df2 	 df3 	 df4 	  euclidmean 	 euclidsd 
