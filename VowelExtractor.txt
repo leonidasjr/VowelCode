@@ -1,0 +1,158 @@
+## Script for extracting f1-f4 acoustic parameters 
+## and the cartesian distances (mean and sd)
+## Copyright (C) 2021, SILVA JR. Leonidas - UEPB-UNICAMP/CNPq grant 151027/2020-0
+## and plot vowels in the f2xf1 acoustic space
+## (C) SILVA JR., Leônidas (UEPB), 2020, 2021 (under development)
+## E-mail: <leonidas.silvajr@gmail.com>
+
+###### SCRIPT UNDER DEVELOPMENT ######
+form Input parameters
+ word File BPvowel_example
+ #word Directory
+ word Extension _formants
+ integer Tier 2
+ #comment Grid settings
+ integer Min_horizontal_range 0
+ integer Max_horizontal_range 6
+ integer Min_vertical_range 0
+ integer Max_vertical_range 4
+ #integer Axes_font_size 14
+ real Min_F1 200
+ real Max_F1 1000
+ real Min_F2 500
+ real Max_F2 2500
+ boolean Garnish 1
+ #comment Plot settings
+ real Number_of_formants 5.5
+ integer IPA_font_size 20
+ choice IPA_color 1
+  button Black
+  button Red
+  #button Blue
+ boolean Draw_ellipse 1
+ choice Ellipse_color 1
+  button Black
+  button Red
+  button Blue
+endform
+
+if garnish = 1
+  call grid
+elsif garnish = 0
+  call clean_grid
+endif
+
+procedure grid
+	Erase all
+	Viewport... 'min_horizontal_range' 'max_horizontal_range' 'min_vertical_range' 'max_vertical_range'
+	Line width... 1
+	Font size... 14
+	#Font size... 'axes_font_size'
+	#Black
+	'iPA_color$'
+	Plain line
+	Times
+	Axes... max_F2 min_F2 max_F1 min_F1
+	Draw inner box
+	Marks bottom... 5 yes yes yes
+	Marks left... 5 yes yes yes
+	Text left... yes %F_%1 %(%H%e%r%t%z%)
+	Text bottom... yes %F_%2 %(%H%e%r%t%z%)
+	Axes... -max_F2 -min_F2 -max_F1 -min_F1
+endproc
+
+procedure clean_grid
+	Erase all
+	Viewport... 'min_horizontal_range' 'max_horizontal_range' 'min_vertical_range' 'max_vertical_range'
+	Line width... 1
+	Font size... 14
+	##Font size... 'axes_font_size'
+	#Black
+	'iPA_color$'
+	Plain line
+	Times
+	Axes... max_F2 min_F2 max_F1 min_F1
+	Draw inner box
+	Marks bottom... 5 yes no no
+	Marks left... 5 yes no no
+	Text left... yes %F_%1 %(%H%e%r%t%z%)
+	Text bottom... yes %F_%2 %(%H%e%r%t%z%)
+	Axes... -max_F2 -min_F2 -max_F1 -min_F1
+endproc
+
+sound$ = file$ + ".wav"
+Read from file... 'sound$'
+soundname$ = selected$("Sound")
+grid$ = file$ + ".TextGrid"
+Read from file... 'grid$'
+gridname$ = selected$("TextGrid")
+countlabel = Count labels... 'tier'
+fileOut$ = file$ + extension$ + ".txt"
+filedelete 'fileOut$'
+fileappend 'fileOut$' IPA 'tab$' f1 'tab$' f2 'tab$' f3 'tab$' f4 'tab$' 
+... f1zsc 'tab$' f2zsc 'tab$' f3zsc  'tab$' f4zsc 'tab$'
+... f1sd 'tab$' f2sd 'tab$' f3sd 'tab$' f4sd 'tab$' df1 'tab$' df2 'tab$' df3 'tab$' df4 'tab$' 
+... euclidmean 'tab$' euclidsd 'newline$'
+
+select TextGrid 'gridname$'
+lab_intervals = Count intervals where: 'tier', "is not equal to", ""
+select Sound 'soundname$'
+ plus TextGrid 'gridname$'
+Extract intervals where: 'tier', "yes", "is not equal to", ""
+
+select TextGrid 'gridname$'
+numberOfIntervals = Get number of intervals... 'tier'
+
+for j from 2 to numberOfIntervals
+   label$ = Get label of interval... 'tier' 'j'
+	if label$ <> ""
+		start = Get starting point... 'tier' 'j'
+		end = Get end point... 'tier' 'j'
+		midpoint = (end-start)/2
+		midpoint = start + midpoint
+		select Sound 'soundname$'
+		Extract part... start end rectangular 1.0 yes
+		part_sound$ = selected$("Sound")
+		select Sound 'part_sound$'
+		To Formant (burg)... 0 'number_of_formants' 5500 0.025 50
+			f1 = Get value at time... 1 'midpoint' Hertz Linear
+			f2 = Get value at time... 2 'midpoint' Hertz Linear
+			f1mean = Get mean: 1, 0, 0, "hertz"
+			f2mean = Get mean: 2, 0, 0, "hertz"
+			f1sd = Get standard deviation: 1, 0, 0, "hertz"
+			f2sd = Get standard deviation: 2, 0, 0, "hertz"
+# extracting confidence interval (ci)	
+		f1ci_pos = ('f1mean'+'f1sd')
+		f1ci_neg = ('f1mean'-'f1sd')
+		f2ci_pos = ('f2mean'+'f2sd')
+		f2ci_neg = ('f2mean'-'f2sd')
+# start plotting
+		Text special... -'f2mean:2' Centre -'f1mean:2' Half Times 'iPA_font_size' 0 'label$'
+		Line width: 2.0
+ 		if draw_ellipse = 1
+			'ellipse_color$'
+			#Red
+			Draw ellipse: -'f2ci_neg:2', -'f2ci_pos:2', -'f1ci_neg:2', -'f1ci_pos:2'
+		elsif draw_ellipse = 0
+			Line width: 1.0
+			select TextGrid 'gridname$'
+		endif
+	endif
+	'iPA_color$'
+	#Black
+	select TextGrid 'gridname$'
+endfor
+
+Line width: 1.0
+select all
+ minus Sound 'soundname$'
+ minus TextGrid 'gridname$'
+Remove
+select Sound 'soundname$'
+ plus TextGrid 'gridname$'
+
+pauseScript: "Deseja salvar a imagem?"
+## Save as 600-dpi PNG file: directory$ + "\" + file$ + ".png"
+Save as 600-dpi PNG file: "C:\Users\Leonidas\Dropbox\UFPB\FabianaPos2021\Scripts\VowelExtractor\" + file$ + ".png"
+writeInfoLine: file$ + ".png" + " created successfully"
+appendInfoLine: "(THIS SCRIPT IS STILL UNDER DEVELOPMENT...)"
