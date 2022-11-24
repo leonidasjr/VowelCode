@@ -17,6 +17,8 @@ It was developed for L2 pronunciation teaching, sociophonetic differences in vow
 
 VowelPlot has a Portuguese version in this repository.
 
+The "AudioPractice.wav" and "AudioPractice.TextGrid" files can serve as an example to run VowelPlot procedures.
+
 HOW TO CITE THIS SCRIPT
 
 SILVA JR., Leonidas. (2022) VowelPlot. [Computer program for Praat]. Available in: <https://github.com/leonidasjr/VowelCode>.
