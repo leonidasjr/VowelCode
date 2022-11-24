@@ -10,7 +10,7 @@ HOW TO CITE THIS SCRIPT
 
 SILVA JR., Leonidas. (2022) VowelParameterExtractor (version 1.0). Computer program for Praat. Available in: <https://github.com/leonidasjr/VowelCode>.
 
-
+------------------------------------------------------------
 
 VowelPlot is a script for plotting vowels semi-automatically in the F1/F2 acoustic space.                     ##
 It was developed for L2 pronunciation teaching, sociophonetic differences in vowels for different dialects as well as for clinic phonetics.
@@ -20,3 +20,5 @@ VowelPlot has a Portuguese version in this repository.
 HOW TO CITE THIS SCRIPT
 
 SILVA JR., Leonidas. (2022) VowelPlot. [Computer program for Praat]. Available in: <https://github.com/leonidasjr/VowelCode>.
+
+SILVA JR., Leonidas. (2022) VowelPlot. [Computer program for Praat], Portuguese version. Available in: <https://github.com/leonidasjr/VowelCode>.
