@@ -1,0 +1,148 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 7.521768707482993 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "word" 
+        xmin = 0 
+        xmax = 7.521768707482993 
+        intervals: size = 13 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.6403081270720288 
+            text = "" 
+        intervals [2]:
+            xmin = 0.6403081270720288 
+            xmax = 1.1864182886765091 
+            text = "said" 
+        intervals [3]:
+            xmin = 1.1864182886765091 
+            xmax = 1.8491666036379049 
+            text = "" 
+        intervals [4]:
+            xmin = 1.8491666036379049 
+            xmax = 2.4286456424790233 
+            text = "sad" 
+        intervals [5]:
+            xmin = 2.4286456424790233 
+            xmax = 2.9904539106331884 
+            text = "" 
+        intervals [6]:
+            xmin = 2.9904539106331884 
+            xmax = 3.4983119446737194 
+            text = "shot" 
+        intervals [7]:
+            xmin = 3.4983119446737194 
+            xmax = 4.119106614240149 
+            text = "" 
+        intervals [8]:
+            xmin = 4.119106614240149 
+            xmax = 4.571621144571135 
+            text = "shut" 
+        intervals [9]:
+            xmin = 4.571621144571135 
+            xmax = 5.321395470241311 
+            text = "" 
+        intervals [10]:
+            xmin = 5.321395470241311 
+            xmax = 5.738099498172003 
+            text = "sit" 
+        intervals [11]:
+            xmin = 5.738099498172003 
+            xmax = 6.378892730464138 
+            text = "" 
+        intervals [12]:
+            xmin = 6.378892730464138 
+            xmax = 6.793969008285725 
+            text = "seat" 
+        intervals [13]:
+            xmin = 6.793969008285725 
+            xmax = 7.521768707482993 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "vowel" 
+        xmin = 0 
+        xmax = 7.521768707482993 
+        intervals: size = 13 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.8248640694739923 
+            text = "" 
+        intervals [2]:
+            xmin = 0.8248640694739923 
+            xmax = 1.0560045849667978 
+            text = "\ef" 
+        intervals [3]:
+            xmin = 1.0560045849667978 
+            xmax = 2.034548057173129 
+            text = "" 
+        intervals [4]:
+            xmin = 2.034548057173129 
+            xmax = 2.3513255200784564 
+            text = "\ae" 
+        intervals [5]:
+            xmin = 2.3513255200784564 
+            xmax = 3.1777364644949433 
+            text = "" 
+        intervals [6]:
+            xmin = 3.1777364644949433 
+            xmax = 3.4356838271464243 
+            text = "\as" 
+        intervals [7]:
+            xmin = 3.4356838271464243 
+            xmax = 4.302852841992299 
+            text = "" 
+        intervals [8]:
+            xmin = 4.302852841992299 
+            xmax = 4.508003960826225 
+            text = "\vt" 
+        intervals [9]:
+            xmin = 4.508003960826225 
+            xmax = 5.54606654704716 
+            text = "" 
+        intervals [10]:
+            xmin = 5.54606654704716 
+            xmax = 5.70747220671797 
+            text = "\ic" 
+        intervals [11]:
+            xmin = 5.70747220671797 
+            xmax = 6.599916055891914 
+            text = "" 
+        intervals [12]:
+            xmin = 6.599916055891914 
+            xmax = 6.768864036108088 
+            text = "i" 
+        intervals [13]:
+            xmin = 6.768864036108088 
+            xmax = 7.521768707482993 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "targets" 
+        xmin = 0 
+        xmax = 7.521768707482993 
+        points: size = 6 
+        points [1]:
+            number = 0.937178827002186 
+            mark = "TARGET" 
+        points [2]:
+            number = 2.2082987452413008 
+            mark = "TARGET" 
+        points [3]:
+            number = 3.2964446321507057 
+            mark = "TARGET" 
+        points [4]:
+            number = 4.404556760651606 
+            mark = "TARGET" 
+        points [5]:
+            number = 5.620611794178756 
+            mark = "TARGET" 
+        points [6]:
+            number = 6.69339031785305 
+            mark = "TARGET" 
