@@ -8,7 +8,7 @@ For plotting purposes, it is required to have at least to pairs of audio/TextGri
 
 HOW TO CITE THIS SCRIPT
 
-SILVA JR., Leonidas. (2022) VowelParameterExtractor (version 1.0). Computer program for Praat. Available in: <https://github.com/leonidasjr/VowelCode>.
+Silva Jr., Leonidas. (2022) VowelParameterExtractor (version 1.0). Computer program for Praat. Available in: <https://github.com/leonidasjr/VowelCode>.
 
 ------------------------------------------------------------
 
@@ -21,6 +21,6 @@ The "AudioPractice.wav" and "AudioPractice.TextGrid" files can serve as an examp
 
 HOW TO CITE THIS SCRIPT
 
-SILVA JR., Leonidas. (2022) VowelPlot. [Computer program for Praat]. Available in: <https://github.com/leonidasjr/VowelCode>.
+Silva Jr., Leonidas. (2022) VowelPlot. [Computer program for Praat]. Available in: <https://github.com/leonidasjr/VowelCode>.
 
-SILVA JR., Leonidas. (2022) VowelPlot. [Computer program for Praat], Portuguese version. Available in: <https://github.com/leonidasjr/VowelCode>.
+Silva Jr., Leonidas. (2022) VowelPlot. [Computer program for Praat], Portuguese version. Available in: <https://github.com/leonidasjr/VowelCode>.
