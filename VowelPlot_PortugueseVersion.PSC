@@ -6,7 +6,7 @@
 ## Silva Jr., L. (2023). Vowelplot. [Computer program for Praat], Portuguese version.
 #####################################################################################
 
-form Insira F1, F2 e trancrição IPA para plotagem de vogais
+form Inserir parâmetros
 	word Pasta Endereço da pasta
 	word Nome_do_estudante EscrevaSeuNome
 	comment Escreva os valores de F1/F2 values e o símbolo fonético da vogal (IPA) para plotar
@@ -45,7 +45,10 @@ procedure plot
 endproc
 
 procedure espaco_vocalico
-	pauseScript: "Por favor, clique em 'Stop' e desmarque a opção: 'Plotar espaco vocalico'"
+	beginPause: "Desmarcando a opção: 'Plotar espaco vocalico'"
+	comment: "Se for sua PRIMEIRA vogal, clique em 'Continue'" 
+	comment: "Se não, clique em 'Stop' e desmarque a opção: 'Plotar espaco vocalico'"
+	endPause: "Continue", 1
 	Erase all
 	Viewport... 0 6 0 4
 	Line width... 1
@@ -54,7 +57,7 @@ procedure espaco_vocalico
 	'iPA_cor$'
 	Plain line
 	
-	## set up X- and Y-axis for F2 and F1 respectively  
+	## ajuste os eixos X e Y para F2 e F1 respectivamente  
 	#Axes... max_F2 min_F2 max_F1 min_F1
 	Axes... 2500 500 1000 200
 	Draw inner box
